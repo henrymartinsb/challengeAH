@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>Nork-Town ToDo List</title>
+  {% endif %}
+  <link href="{{ url_for('static',filename='bootstrap/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic'
+    rel='stylesheet' type='text/css'>
+  <link href="{{ url_for('static',filename='bootstrap/vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='bootstrap/css/creative.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/style.css')}}" />
+</head>
+
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 navbar-scrolled" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="/">Nork-Town ToDo List</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text--blue" href="{{ url_for('providers') }}">👉🏼 Go to Vehicle Control</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Project created with ❤ for Advice Health by <a href="https://www.linkedin.com/in/henry-martins-504372147/" 
+        style="text-decoration: none; color: #0047ff; font-weight: 600; font-size: 15px; font-family: Object Sans;"><i>Henry Martins</i></a></div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static',filename='bootstrap/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <script src="{{ url_for('static',filename='bootstrap/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='bootstrap/vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+
+</body>
+</html>

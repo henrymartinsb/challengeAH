@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-section" id="add-provider-form">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Add a New Owner</h2>
+          <hr class="divider my-4">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="row o-hidden border-0">
+          <div class="col-lg-12">
+            <form class="user" action="/providers/add-provider" method="post">
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <label for="owname">Name</label>
+                  <input type="text" class="form-control form-control-user" name="owname" id="owname" required>
+                </div>
+                <div class="col-lg-6">
+                  <label for="mowner">Owner? Yes/No</label>
+                  <input type="text" class="form-control form-control-user" name="mowner" id="mowner" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="carmodel">Model</label>
+                <input type="text" class="form-control form-control-user" name="carmodel" id="carmodel">
+              </div>
+              <div class="form-group">
+                <label for="color">Color</label>
+                <input type="text" class="form-control form-control-user" name="color" id="color">
+              </div>              
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Add Owner</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

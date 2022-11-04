@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="page-section" id="provider-list">
+    <div class="container">
+        <h2 class="text-center mt-0">Nork-Town Vehicle Control</h2>
+        <hr class="divider my-4">
+
+        <a href="/providers/add-provider" class="btn btn-primary my-2">Add New</a>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Owner?</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Color</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for provider in providers %}
+                    <tr>
+                        <td scope="row">{{provider['id'] }}</td>
+                        <td scope="row">{{provider['owname'] }}</td>
+                        <td scope="row">{{provider['mowner'] }}</td>
+                        <td scope="row">{{provider['carmodel'] }}</td>
+                        <td scope="row">{{provider['color'] }}</td>
+
+                        <td scope="row">
+                            <a href="/providers/edit/{{provider['id']}}" class="btn btn-secondary btn-sm">Edit</a>
+                            <a href="/providers/delete/{{provider['id']}}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
