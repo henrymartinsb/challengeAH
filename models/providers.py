@@ -5,21 +5,21 @@ def providers_list():
             "id": 414532,
             "owname": "Zlatan Ibrahimovic",
             "mowner": "Yes",
-            "carmodel": "Ferrari Monza SP2",
+            "carmodel": "Hatch",
             "color": "Yellow"
         },
         {
             "id": 128720,
             "owname": "Karim Benzema",
             "mowner": "Yes",
-            "carmodel": "Bugatti Chiron",
+            "carmodel": "Sedan",
             "color": "Blue" 
         },
         {
             "id": 286738,
             "owname": "Robert Lewandowski",
             "mowner": "Yes",
-            "carmodel": "Bentley Continental GTC",
+            "carmodel": "Convertible",
             "color": "Gray" 
 	    },
         {
